@@ -1,57 +1,60 @@
-# Reader's Haven
+# Leafline Library SPA
 
-Reader's Haven is a lightweight, single-page reading tracker that celebrates the books you love. The application focuses on three core experiences—favoriting titles, leaving reflective comments, and reviewing a personal activity log—while ensuring everything persists locally between visits.
+A React single-page application scaffolded with [Vite](https://vite.dev) that
+lays the foundation for a modern digital library experience. The project
+includes a responsive layout, global design tokens, and client-side routing for
+core library views.
 
 ## Getting started
 
-No build tooling is required. Clone the repository (or download the source) and open `index.html` in any modern browser. Because all data is stored in `localStorage`, the experience works entirely offline after the first load.
+### Prerequisites
 
-```text
-project/
-├── index.html
-├── styles.css
-├── app.js
-└── README.md
+- Node.js 18 or later
+- npm 9 or later (ships with Node.js)
+
+### Installation
+
+```bash
+npm install
 ```
 
-For the richest behavior, run the app from a simple static server (for example, `python3 -m http.server`) to mirror a production-like environment.
+### Available scripts
 
-## Feature highlights
+| Command           | Description                                           |
+| ----------------- | ----------------------------------------------------- |
+| `npm run dev`     | Start the Vite development server with hot reloading. |
+| `npm run start`   | Alias for `npm run dev`.                              |
+| `npm run build`   | Create an optimized production build.                 |
+| `npm run preview` | Preview the production build locally.                 |
+| `npm run lint`    | Lint all JavaScript/JSX files with ESLint.            |
 
-- **Three core routes** powered by hash-based navigation: a welcoming Home view, a Library catalogue, and the Profile dashboard.
-- **Favorites management** with instant feedback. Toggling a favorite in the Library immediately updates the Profile view and navigation badges.
-- **Commenting system** that stores notes per book, exposes inline editing controls, and groups reflections by title in the Profile.
-- **Likes tracking** to acknowledge standout books. The profile summary surfaces the total likes cast.
-- **Activity log** summarizing the latest favorites, likes, and comments with relative timestamps.
-- **Persistent state** stored in `localStorage`, enabling the same data to appear across sessions without external services.
+## Project structure
 
-## Responsive experience
+```
+src/
+├─ components/
+│  └─ layout/          # Shared layout primitives (header, footer, shell)
+├─ pages/               # Route-level page placeholders
+└─ styles/              # Global styling tokens and resets
+```
 
-The interface received a responsive polish:
+## Styling & tooling
 
-- A mobile-friendly navigation drawer with a backdrop and focus management.
-- Flexible typography and spacing via `clamp()` so text scales gracefully between viewports.
-- Grid layouts for favorites, stats, and the library catalogue that adapt from single column to multi-column as space allows.
-- Touch-friendly tap targets and consistent button styling across screen sizes.
+- Global typography, color, and spacing tokens are defined in
+  `src/styles/global.scss` and are available across the app.
+- Component-level styles use [CSS Modules](https://vite.dev/guide/features.html#css-modules)
+  with SCSS for encapsulated styling.
+- ESLint (ES2023 + React Hooks + React Refresh) is configured via
+  `eslint.config.js` and can be run with `npm run lint`.
 
-## Persistence & UX validation
+## Routing overview
 
-Persistence and cross-view synchronization were manually verified:
+Client-side routing is powered by `react-router-dom` and currently includes:
 
-- Favoriting a book in the Library reflects instantly in the Profile and remains after refresh.
-- Removing a favorite or deleting a comment from the Profile updates the Library cards without extra input.
-- Comments persist per book, are grouped correctly in the Profile, and survive navigation or a full reload.
-- Navigation between Home, Library, and Profile retains scroll focus and closes the mobile drawer automatically.
+- `/` – Home landing experience
+- `/browse` – Browse the full collection
+- `/books/:bookId` – Placeholder detail view for a selected book
+- `/profile` – User profile dashboard placeholder
 
-## Limitations
-
-- Data lives exclusively in the browser's `localStorage`. Clearing browser storage or switching devices wipes the library, favorites, and comments.
-- The book catalogue is simulated; there is no backend API or ability to add custom titles.
-- The activity log caps the tracked events to the 30 most recent interactions to avoid runaway growth.
-
-## Accessibility considerations
-
-- Landmarks, focus management, and keyboard-accessible controls were added to help screen reader and keyboard users.
-- Color contrast aims to meet WCAG AA guidance, though further audits are recommended before shipping to production.
-
-Feel free to expand the dataset or integrate real services—the UI and state management structure are ready to grow.
+Each route renders a placeholder component that can be extended with real data
+and interaction flows as features are implemented.
