@@ -1,0 +1,32 @@
+.widgets {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 2rem;
+}
+
+.widgetCard {
+  padding: 1.75rem;
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.widgetCard h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.widgetCard p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.widgetCard ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--color-text-secondary);
+}

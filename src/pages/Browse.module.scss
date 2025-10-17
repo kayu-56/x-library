@@ -1,0 +1,24 @@
+.genreGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+
+.genreTile {
+  padding: 1.25rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(79, 70, 229, 0.12);
+  background: #fff;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.genreTile:hover,
+.genreTile:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.16);
+}
