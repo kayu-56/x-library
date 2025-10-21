@@ -41,6 +41,136 @@
   color: var(--color-text-primary);
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.actionBtn:hover,
+.actionBtn:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.15);
+}
+
+.actionActive {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  box-shadow: inset 0 0 0 1px rgba(79, 70, 229, 0.3);
+}
+
+.count {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.comments {
+  margin-top: 0.5rem;
+}
+
+.commentForm {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 84px;
+  resize: vertical;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font: inherit;
+}
+
+.formRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: space-between;
+}
+
+.error {
+  color: #b00020;
+  font-size: 0.9rem;
+}
+
+.submitBtn {
+  align-self: flex-end;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.commentList {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.commentItem {
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #fff;
+}
+
+.commentMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.commentAuthor {
+  font-weight: 600;
+}
+
+.commentTime {
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+.commentActions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.smallBtn {
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.85rem;
+  margin-top: 0.75rem;
+}
+
 .backLink {
   align-self: flex-start;
   padding: 0.6rem 1rem;
