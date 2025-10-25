@@ -47,8 +47,14 @@ npm install
 ```
 src/
 ├─ components/
-│  └─ layout/          # Shared layout primitives (header, footer, shell)
+│  ├─ layout/          # Shared layout primitives (header, footer, shell)
+│  └─ browse/          # Browse page components (filters, search, pagination)
+├─ contexts/           # React contexts for state management
+├─ constants/          # Application constants and configuration
+├─ providers/          # Context providers
+├─ hooks/              # Custom React hooks
 ├─ pages/               # Route-level page placeholders
+├─ data/               # Static data (books dataset)
 └─ styles/              # Global styling tokens and resets
 ```
 
@@ -66,12 +72,38 @@ src/
 Client-side routing is powered by `react-router-dom` and currently includes:
 
 - `/` – Home landing experience
-- `/browse` – Browse the full collection
+- `/browse` – **Implemented**: Browse full collection with filtering, search, and sorting
 - `/books/:bookId` – Placeholder detail view for a selected book
 - `/profile` – User profile dashboard placeholder
 
 Each route renders a placeholder component that can be extended with real data
 and interaction flows as features are implemented.
+
+## Browse page features
+
+The `/browse` page includes a fully functional book browsing experience:
+
+### Filtering & Search
+- **Category tabs**: Filter by Fiction, Programming, Humanities, or view all books
+- **Real-time search**: Search by title, author, or subject with instant results
+- **Sorting options**: Sort by publication date (newest/oldest) or alphabetically
+
+### Performance Optimizations
+- **Pagination**: 20 books per page for optimal performance with 1,000+ book dataset
+- **Memoization**: React.memo and useMemo for efficient re-rendering
+- **Event-driven updates**: Smart pagination reset when filters change
+
+### User Experience
+- **Persistent preferences**: Filters and search are saved to localStorage
+- **Empty states**: Helpful messaging when no books match filters
+- **Keyboard navigation**: Full accessibility support (Escape to clear search, tab navigation)
+- **Responsive design**: Mobile-optimized layout with touch-friendly controls
+
+### Accessibility
+- **ARIA labels**: Screen reader support for all interactive elements
+- **Semantic HTML**: Proper heading hierarchy and landmark elements
+- **Focus management**: Logical tab order and visible focus indicators
+- **Keyboard shortcuts**: Enhanced navigation for keyboard users
 
 ## Technology stack
 
