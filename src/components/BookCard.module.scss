@@ -8,11 +8,27 @@
   border: 1px solid rgba(15, 23, 42, 0.08);
   background: #ffffff;
   box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
 }
 
 .title {
   margin: 0 0 0.25rem 0;
   font-size: 1.05rem;
+}
+
+.title a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.title a:hover {
+  color: var(--color-accent);
 }
 
 .meta {
@@ -53,11 +69,12 @@
   background: var(--color-accent);
   color: #fff;
   font-weight: 600;
+  text-decoration: none;
   transition: transform 150ms ease, box-shadow 150ms ease;
 }
 
 .viewLink:hover,
 .viewLink:focus {
   transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(79, 70, 229, 0.25);
+  box-shadow: 0 10px 22px rgba(79, 70, 225, 0.25);
 }
