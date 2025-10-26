@@ -1,4 +1,3 @@
-import { BrowseProvider } from '../providers/BrowseProvider.jsx'
 import { useBrowse } from '../hooks/useBrowse.js'
 import { useEffect } from 'react'
 import { useFilteredBooks } from '../hooks/useFilteredBooks.js'
@@ -8,7 +7,7 @@ import SortControls from '../components/browse/SortControls.jsx'
 import BookGrid from '../components/browse/BookGrid.jsx'
 import styles from './Browse.module.scss'
 
-function BrowseContent() {
+function BrowsePage() {
   const { preferences } = useBrowse()
   const filteredBooks = useFilteredBooks(preferences)
 
@@ -40,14 +39,6 @@ function BrowseContent() {
         category={preferences.category}
       />
     </section>
-  )
-}
-
-function BrowsePage() {
-  return (
-    <BrowseProvider>
-      <BrowseContent />
-    </BrowseProvider>
   )
 }
 
