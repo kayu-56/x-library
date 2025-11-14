@@ -1,8 +1,8 @@
 {
-  "name": "leafline-library",
+  "name": "fusion-collab-platform",
   "private": true,
   "version": "0.1.0",
-  "description": "React single-page application scaffolded with Vite for the Leafline Library experience.",
+  "description": "AI-augmented code collaboration and learning platform built with React and Vite.",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,9 +13,12 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
+    "diff": "^5.2.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.4",
+    "react-syntax-highlighter": "^15.5.0",
+    "recharts": "^2.12.7",
     "sass": "^1.93.2"
   },
   "devDependencies": {

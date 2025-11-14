@@ -2,18 +2,25 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, #f3f4f6 0%, #f8f9fb 35%, #ffffff 100%);
+  background: radial-gradient(circle at top, rgba(99, 102, 241, 0.06), transparent 60%),
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 35%, #f9fafb 100%);
 }
 
 .content {
   flex: 1;
-  width: min(1100px, 100%);
+  width: min(1200px, 100%);
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 3.5rem;
+  padding: 2.75rem 1.75rem 3.75rem;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding: 2.25rem 1.5rem 3.25rem;
+  }
 }
 
 @media (max-width: 768px) {
   .content {
-    padding: 1.75rem 1.25rem 3rem;
+    padding: 1.85rem 1.25rem 2.75rem;
   }
 }

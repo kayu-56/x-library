@@ -1,0 +1,343 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+}
+
+.summarySection header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: #1f2937;
+}
+
+.summarySection header p {
+  margin: 0.45rem 0 0;
+  color: #64748b;
+}
+
+.summaryGrid {
+  margin-top: 1.4rem;
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.summaryCard {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.08);
+}
+
+.summaryLabel {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.summaryValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e1b4b;
+}
+
+.summaryDetail {
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.memberSection {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr);
+}
+
+.memberSelector h2 {
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
+  color: #1f2937;
+}
+
+.memberSelector ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.memberSelector li button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: left;
+  cursor: pointer;
+}
+
+.memberSelector li button[data-active='true'] {
+  border-color: rgba(99, 102, 241, 0.6);
+  box-shadow: 0 12px 32px rgba(79, 70, 229, 0.18);
+}
+
+.memberDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.memberName {
+  display: block;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.memberRole {
+  display: block;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.memberDetail {
+  background: rgba(15, 23, 42, 0.92);
+  color: rgba(226, 232, 240, 0.92);
+  border-radius: 20px;
+  padding: 1.8rem;
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.3);
+}
+
+.memberStats {
+  display: flex;
+  gap: 1rem;
+}
+
+.memberStats div {
+  background: rgba(30, 41, 59, 0.7);
+  border-radius: 14px;
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.memberStats span {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(148, 163, 184, 0.8);
+}
+
+.memberStats strong {
+  font-size: 1.4rem;
+  color: #f8fafc;
+}
+
+.radarWrapper {
+  grid-column: span 2;
+  background: rgba(30, 41, 59, 0.7);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.focusList,
+.achievementList {
+  background: rgba(30, 41, 59, 0.7);
+  border-radius: 18px;
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.focusList h3,
+.achievementList h3 {
+  margin: 0;
+  color: #c7d2fe;
+  font-size: 1.1rem;
+}
+
+.focusList ul,
+.achievementList ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.focusList li,
+.achievementList li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.badge {
+  background: rgba(129, 140, 248, 0.3);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #e0e7ff;
+  align-self: flex-start;
+}
+
+.badgeMeta {
+  font-size: 0.75rem;
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.capabilitySection header h2,
+.teamAchievements header h2,
+.skillMatrixSection header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #1f2937;
+}
+
+.capabilitySection header p,
+.teamAchievements header p,
+.skillMatrixSection header p {
+  margin: 0.35rem 0 0;
+  color: #64748b;
+}
+
+.capabilityTableWrapper {
+  margin-top: 1.2rem;
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.capabilityTableWrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.capabilityTableWrapper th,
+.capabilityTableWrapper td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  text-align: left;
+}
+
+.capabilityTableWrapper th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+.trendBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.18);
+  color: #16a34a;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.teamAchievements {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.achievementGrid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.achievementGrid article {
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(255, 255, 255, 0.96);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.achievementGrid h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1f2937;
+}
+
+.achievementGrid p {
+  margin: 0;
+  color: #475569;
+  flex: 1;
+}
+
+.skillMatrixSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.skillMatrixGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.skillMatrixGrid article {
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(248, 250, 252, 0.9);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.skillMatrixGrid h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #1f2937;
+}
+
+@media (max-width: 1024px) {
+  .memberSection {
+    grid-template-columns: 1fr;
+  }
+
+  .memberDetail {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .radarWrapper {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .memberStats {
+    flex-direction: column;
+  }
+}

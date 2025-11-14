@@ -1,0 +1,288 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  color: #1f2937;
+}
+
+.hero p {
+  margin: 0.4rem 0 0;
+  color: #64748b;
+  max-width: 60ch;
+}
+
+.searchBox {
+  min-width: 260px;
+}
+
+.searchBox input {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.contextSection header h2,
+.resourceSection h2,
+.pathSection h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #1f2937;
+}
+
+.contextSection header p,
+.resourceSection p,
+.pathSection p {
+  margin: 0.4rem 0 0;
+  color: #64748b;
+}
+
+.contextGrid {
+  margin-top: 1.4rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.contextCard {
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(255, 255, 255, 0.96);
+  padding: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.contextCard[data-active='true'] {
+  border-color: rgba(99, 102, 241, 0.6);
+  box-shadow: 0 18px 44px rgba(79, 70, 229, 0.18);
+  transform: translateY(-4px);
+}
+
+.contextCard:hover {
+  transform: translateY(-2px);
+}
+
+.contextLabel {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.contextCard p {
+  margin: 0;
+  color: #475569;
+  flex: 1;
+}
+
+.contextTags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.contextTags span {
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.contextCard footer span {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.resourceHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.tagToolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.2rem 0 1rem;
+}
+
+.tagChip {
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tagChip[data-active='true'] {
+  background: rgba(99, 102, 241, 0.18);
+  border-color: rgba(99, 102, 241, 0.5);
+  color: #4338ca;
+}
+
+.resourceGrid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.resourceCard {
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(255, 255, 255, 0.96);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.resourceMeta {
+  display: flex;
+  gap: 0.65rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #94a3b8;
+}
+
+.resourceFormat {
+  color: #4338ca;
+}
+
+.resourceCard h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1f2937;
+}
+
+.resourceCard p {
+  margin: 0;
+  color: #475569;
+  flex: 1;
+}
+
+.resourceTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.resourceTags span {
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.18);
+  color: #059669;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.resourceCard footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.resourceCard footer a {
+  color: #4338ca;
+  font-weight: 600;
+}
+
+.emptyState {
+  grid-column: 1 / -1;
+  border-radius: 16px;
+  border: 1px dashed rgba(148, 163, 184, 0.5);
+  background: rgba(248, 250, 252, 0.6);
+  padding: 1.4rem;
+  text-align: center;
+  color: #475569;
+}
+
+.pathSection {
+  background: rgba(15, 23, 42, 0.92);
+  color: rgba(226, 232, 240, 0.92);
+  border-radius: 20px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.3);
+}
+
+.pathSection h2 {
+  color: #c7d2fe;
+}
+
+.pathSection p {
+  color: rgba(191, 219, 254, 0.88);
+}
+
+.pathSection ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pathSection li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stepTitle {
+  font-weight: 600;
+}
+
+.stepDuration {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.stepResource {
+  font-size: 0.85rem;
+  color: rgba(191, 219, 254, 0.9);
+}
+
+.pathSection footer {
+  font-size: 0.85rem;
+  color: rgba(191, 219, 254, 0.75);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchBox {
+    width: 100%;
+  }
+}
