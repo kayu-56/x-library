@@ -4,9 +4,11 @@ import styles from './Header.module.scss'
 
 const navigation = [
   { to: '/', label: 'Home', end: true },
-  { to: '/browse', label: 'Browse' },
-  { to: '/books/atlas-of-echoes', label: 'Book Detail' },
-  { to: '/profile', label: 'Profile' },
+  { to: '/code-diff', label: 'Code Diff' },
+  { to: '/pr-dashboard', label: 'PR Analytics' },
+  { to: '/code-quality', label: 'Quality' },
+  { to: '/learning-center', label: 'Learning' },
+  { to: '/skill-development', label: 'Skills' },
 ]
 
 function Header() {
@@ -15,11 +17,11 @@ function Header() {
       <div className={styles.inner}>
         <div className={styles.branding}>
           <span className={styles.logoMark} aria-hidden="true">
-            📚
+            💻
           </span>
           <div>
-            <span className={styles.title}>Leafline Library</span>
-            <p className={styles.subtitle}>Stories, guides, and inspiration</p>
+            <span className={styles.title}>Code Collab Platform</span>
+            <p className={styles.subtitle}>AI-powered development tools</p>
           </div>
         </div>
         <nav className={styles.nav} aria-label="Main navigation">
