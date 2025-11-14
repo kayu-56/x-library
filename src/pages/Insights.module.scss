@@ -1,0 +1,243 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+}
+
+.sectionHeader h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.35rem);
+  color: #1f2937;
+}
+
+.sectionHeader p {
+  margin: 0.4rem 0 0;
+  color: #64748b;
+}
+
+.metricGrid {
+  margin-top: 1.8rem;
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.metricCard {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 18px;
+  padding: 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 14px 38px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.metricLabel {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.metricValue {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #1e1b4b;
+}
+
+.metricDetail {
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.visualSection {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.chartCard {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+}
+
+.chartCard header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #1e293b;
+}
+
+.chartCard header p {
+  margin: 0.4rem 0 0;
+  color: #64748b;
+}
+
+.chartWrap {
+  width: 100%;
+  height: 280px;
+}
+
+.chartFooter {
+  display: flex;
+  justify-content: space-between;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.statusSection {
+  display: grid;
+  gap: 1.3rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.statusCard {
+  background: rgba(15, 23, 42, 0.92);
+  color: rgba(226, 232, 240, 0.9);
+  border-radius: 20px;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 20px 44px rgba(15, 23, 42, 0.35);
+}
+
+.statusCard h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #c7d2fe;
+}
+
+.statusCard p {
+  margin: 0;
+  color: rgba(191, 219, 254, 0.9);
+}
+
+.statusCard ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.statusCard li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.trend {
+  color: #4ade80;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-left: 0.25rem;
+}
+
+.tableSection {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 1.8rem;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.tableSection header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #1f2937;
+}
+
+.tableSection header p {
+  margin: 0.4rem 0 0;
+  color: #64748b;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.tableWrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.tableWrapper th,
+.tableWrapper td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.tableWrapper th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+.tableWrapper tbody tr:hover {
+  background: rgba(226, 232, 240, 0.25);
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+.statusBadge[data-status='open'] {
+  background: rgba(59, 130, 246, 0.2);
+  color: #1d4ed8;
+}
+
+.statusBadge[data-status='merged'] {
+  background: rgba(34, 197, 94, 0.2);
+  color: #15803d;
+}
+
+.statusBadge[data-status='closed'] {
+  background: rgba(239, 68, 68, 0.2);
+  color: #b91c1c;
+}
+
+.statusBadge[data-status='draft'] {
+  background: rgba(96, 165, 250, 0.2);
+  color: #0ea5e9;
+}
+
+@media (max-width: 768px) {
+  .metricGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .statusCard li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .metricGrid {
+    grid-template-columns: 1fr;
+  }
+}
